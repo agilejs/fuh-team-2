@@ -21,8 +21,9 @@ before_script:
 # more information on automatic deployment to heroku
 deploy:
   provider: heroku
-  app: movie-database-node
+  app: fuh-team-2
   api_key:
-    secure: ! 'LfX4hB0xQv9z4ZD+Iiz0tffiNceHyB4/wfeFacra7m9xLpjtpqOmBvbQGzl3
-      3EGek2clup/ri2RHHQm5QCqK5L8ohptvHSoBusghHmXyV80knIb8mlnpmwMe
-      7Vs7v9wdALHudWPHly9pN0OZHxYsRprQc8R6b2rowAdMxzMraDg='
+  - secure: ! 'DnYQPRSdlGDuHBlZVBRB2huZMbwlVLrr9ijDZWgx4wpg+l+w9Iq1y9ka88f8
+        JTbRuuqLphPbboM11CAvJmQP2j4YAp9Yy39lXqP6zs7G02jEefLFwFbkCKTg
+        /wU2jCqe0z0FWkHt/SPR4cgu5RJ3lRuyr2xDxtaJXup+v8GxH2U='
+              
