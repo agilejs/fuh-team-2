@@ -93,3 +93,14 @@ function MovieTabController($scope) {
         return (year == null || year === undefined) ? 'unknown' : year;
     };
 }
+
+function ActorsAddCtrl ($scope, $http, $location) {
+    'use strict';
+    $scope.actor = {};
+    $scope.save = function (actor) {
+        $http.post('/actor', actor)
+        .success(function(res) {
+            $location.path('/actors/' + res.id);
+        });
+    };
+}

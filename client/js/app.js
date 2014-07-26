@@ -5,6 +5,7 @@
   MoviesAddCtrl:false,
   MovieDetailCtrl:false,
   MovieEditCtrl:false,
+  ActorsAddCtrl:false,
   ErrorCtrl:false */
 
 angular.module('MovieDatabase', []).config(
@@ -41,6 +42,12 @@ angular.module('MovieDatabase', []).config(
         templateUrl: '/partial/movies/edit.html',
         activeTab: 'movies'
     })
+    .when('/actors/new', {
+        controller: ActorsAddCtrl,
+        templateUrl: '/partial/actors/add.html',
+        activeTab: 'actors'
+    })
+
     .when('/404', {
         controller: NotFoundCtrl,
         templateUrl: '/partial/notFound.html',
