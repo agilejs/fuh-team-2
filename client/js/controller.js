@@ -86,3 +86,10 @@ function HeaderController($scope, $route) {
         return ($route.current && ($route.current.activeTab === name)) ? 'active' : '';
     };
 }
+
+function MovieTabController($scope) {
+    'use strict';
+    $scope.printYear = function(year) {
+        return (year == null || year === undefined) ? 'unknown' : year;
+    };
+}
