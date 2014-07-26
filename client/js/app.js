@@ -14,7 +14,7 @@ angular.module('MovieDatabase', []).config(
     $routeProvider
     .when('/', {
         controller: WelcomeCtrl,
-        resolve: WelcomeCtrl.resolve,
+        resolve: MoviesListCtrl.resolve,
         templateUrl: '/partial/index.html',
         activeTab: 'home'
     })

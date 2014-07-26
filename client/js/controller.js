@@ -3,8 +3,9 @@ function AppCtrl ($scope) {
     $scope.title = 'The Movie Database';
 }
 
-function WelcomeCtrl ($scope) {
+function WelcomeCtrl ($scope, moviesResponse) {
     'use strict';
+    $scope.movies = moviesResponse.data;
     $scope.nav = 'home';
 }
 
