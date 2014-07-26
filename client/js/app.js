@@ -14,30 +14,36 @@ angular.module('MovieDatabase', []).config(
     $routeProvider
     .when('/', {
         controller: WelcomeCtrl,
-        templateUrl: '/partial/index.html'
+        resolve: WelcomeCtrl.resolve,
+        templateUrl: '/partial/index.html',
+        activeTab: 'home'
     })
     .when('/movies', {
         controller: MoviesListCtrl,
         resolve: MoviesListCtrl.resolve,
-        templateUrl: '/partial/movies/list.html'
+        templateUrl: '/partial/movies/list.html',
+        activeTab: 'movies'
     })
     .when('/movies/new', {
         controller: MoviesAddCtrl,
-        templateUrl: '/partial/movies/add.html'
+        templateUrl: '/partial/movies/add.html',
+        activeTab: 'movies'
     })
     .when('/movies/:id', {
         controller: MovieDetailCtrl,
         resolve: MovieDetailCtrl.resolve,
-        templateUrl: '/partial/movies/detail.html'
+        templateUrl: '/partial/movies/detail.html',
+        activeTab: 'movies'
     })
     .when('/movies/:id/edit', {
         controller: MovieEditCtrl,
         resolve: MovieEditCtrl.resolve,
-        templateUrl: '/partial/movies/edit.html'
+        templateUrl: '/partial/movies/edit.html',
+        activeTab: 'movies'
     })
     .when('/404', {
         controller: NotFoundCtrl,
-        templateUrl: '/partial/notFound.html'
+        templateUrl: '/partial/notFound.html',
     })
     .when('/error', {
         controller: ErrorCtrl,

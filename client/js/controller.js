@@ -3,11 +3,14 @@ function AppCtrl ($scope) {
     $scope.title = 'The Movie Database';
 }
 
-function WelcomeCtrl () {
+function WelcomeCtrl ($scope) {
+    'use strict';
+    $scope.nav = 'home';
 }
 
 function MoviesListCtrl ($scope, $location, moviesResponse) {
     'use strict';
+    $scope.nav = 'movies';
     $scope.movies = moviesResponse.data;
     $scope.add = function () {
         $location.path('/movies/new');
@@ -75,3 +78,7 @@ function NotFoundCtrl ($scope, $location) {
 }
 
 var ErrorCtrl = NotFoundCtrl;
+
+function HeaderController($scope, $route) {
+    $scope.$route = $route;
+}

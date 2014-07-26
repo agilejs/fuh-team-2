@@ -9,17 +9,17 @@
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="navbar-inner">
+        <div class="navbar-inner" ng-controller="HeaderController">
             <div class="container">
                 <a class="brand" href="/">Movie Database</a>
                 <ul class="nav">
-                    <li class="active">
+                    <li ng-class="{active: $route.current.activeTab == 'home'}">
                         <a href="/">Home</a>
                     </li>
-                    <li>
+                    <li ng-class="{active: $route.current.activeTab == 'movies'}">
                         <a href="/movies">Movies</a>
                     </li>
-                    <li>
+                    <li ng-class="{active: $route.current.activeTab == 'actors'}">
                         <a href="/actors">Actors</a>
                     </li>
                 </ul>
