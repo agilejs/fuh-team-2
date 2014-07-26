@@ -81,5 +81,7 @@ function NotFoundCtrl ($scope, $location) {
 var ErrorCtrl = NotFoundCtrl;
 
 function HeaderController($scope, $route) {
-    $scope.$route = $route;
+    $scope.active = function(name) {
+        return ($route.current && ($route.current.activeTab === name)) ? 'active' : '';
+    };
 }

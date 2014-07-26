@@ -13,13 +13,13 @@
             <div class="container">
                 <a class="brand" href="/">Movie Database</a>
                 <ul class="nav">
-                    <li ng-class="{active: $route.current.activeTab == 'home'}">
+                    <li ng-class="active('home')">
                         <a href="/">Home</a>
                     </li>
-                    <li ng-class="{active: $route.current.activeTab == 'movies'}">
+                    <li ng-class="active('movies')">
                         <a href="/movies">Movies</a>
                     </li>
-                    <li ng-class="{active: $route.current.activeTab == 'actors'}">
+                    <li ng-class="active('actors')">
                         <a href="/actors">Actors</a>
                     </li>
                 </ul>
